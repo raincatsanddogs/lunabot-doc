@@ -1,0 +1,44 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import 'katex/dist/katex.min.css';
+
+/* 25点，Nightcord见 - 暮光紫核心调 (#7c4394)，结合香槟暖白与柔光，清爽且具高对比度 */
+:root {
+  --ifm-color-primary: #7c4394;
+  --ifm-color-primary-dark: #703c85;
+  --ifm-color-primary-darker: #6a397e;
+  --ifm-color-primary-darkest: #572f67;
+  --ifm-color-primary-light: #884aa2;
+  --ifm-color-primary-lighter: #8e51a7;
+  --ifm-color-primary-lightest: #a16bb7;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(124, 67, 148, 0.08);
+}
+
+/* 暗色模式：采用柔和清澈的紫丁香/暮光紫 (#c28ee0)，具备高可读性与温润质感 */
+[data-theme='dark'] {
+  --ifm-color-primary: #c28ee0;
+  --ifm-color-primary-dark: #b57dd5;
+  --ifm-color-primary-darker: #ad74ce;
+  --ifm-color-primary-darkest: #9253b7;
+  --ifm-color-primary-light: #cf9feb;
+  --ifm-color-primary-lighter: #d6a7ef;
+  --ifm-color-primary-lightest: #e8c5fa;
+  --docusaurus-highlighted-code-line-bg: rgba(194, 142, 224, 0.15);
+}
+
+/* 统一 Tabs 选项卡文字垂直对齐与字体基准，防止因跨语言字体 fallback 或 Emoji 导致基线和高度不一致 */
+.tabs {
+  align-items: center;
+}
+
+.tabs__item {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}

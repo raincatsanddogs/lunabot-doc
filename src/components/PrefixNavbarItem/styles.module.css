@@ -1,0 +1,146 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.triggerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.triggerBtn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.activeTag {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+}
+
+.arrow {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  padding: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+[data-theme='dark'] .popover {
+  border-color: rgba(204, 170, 136, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popoverTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.presetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.chip {
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--ifm-color-content);
+  transition: all 0.15s ease;
+  font-weight: 600;
+}
+
+.chip:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.chipActive {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff !important;
+}
+
+.customRow {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.customInput {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+}
+
+.customInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.popoverFooter {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  border-top: 1px dashed var(--ifm-color-emphasis-300);
+  padding-top: 0.5rem;
+  line-height: 1.4;
+}
