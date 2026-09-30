@@ -15,7 +15,7 @@ toc_max_heading_level: 3
 ## 广播订阅与查看 {#subscription}
 
 ### 查询广播分组列表 {#list-groups}
-`/bc list` / `/bc sublist`
+`/bc list` / `/bc sublist`（别名：`/broadcast list`、`/broadcast sublist`）
 
 查看系统内已创建的全部可用广播分组，或查询当前所在群聊（或私聊）已订阅的广播分组列表。
 
@@ -23,19 +23,21 @@ toc_max_heading_level: 3
 | :--- | :--- |
 | `/bc list` | 查看系统已有的全部广播分组名称 |
 | `/bc sublist` | 查询当前会话已订阅的广播分组 |
+| `/broadcast list` | 使用长指令形式查看所有广播分组 |
 
 ---
 
 ### 订阅与退订分组 {#toggle-sub}
-`/bc sub <分组名>` / `/bc unsub <分组名>`
+`/bc sub <分组名>` / `/bc unsub <分组名>` / `/bc unsuball`（别名：`/broadcast sub`、`/broadcast unsub`、`/broadcast unsuball`）
 
-订阅或取消订阅特定主题的广播组。当该组发布新公告时将自动接收转发。在私聊中可自由订阅；在群聊中限超级管理员操作。
+订阅、退订特定主题的广播组，或一键退订全部广播。当该组发布新公告时将自动接收转发。在私聊中可自由订阅；在群聊中限超级管理员操作。
 
 | 常用操作示例 | 对应说明 |
 | :--- | :--- |
 | `/bc sub Notice` | 订阅名为 `Notice` 的广播组 |
 | `/bc unsub Notice` | 退订名为 `Notice` 的广播组 |
 | `/bc unsuball` | 一键退订当前群聊已绑定的所有广播分组 |
+| `/broadcast unsub Notice` | 使用长指令退订指定广播组 |
 
 ---
 
@@ -46,20 +48,31 @@ toc_max_heading_level: 3
 :::
 
 ### 创建与删除广播组 {#manage-groups}
-🛠️ `/bc add <分组名>` / 🛠️ `/bc del <分组名>`
+🛠️ `/bc add <分组名>` / 🛠️ `/bc del <分组名>`（别名：`/broadcast add`、`/broadcast del`）
 
-新建或注销指定的广播分组，支持审计查看分组下的全部订阅目标。
+新建或注销指定的广播分组。
 
 | 常用操作示例 | 对应说明 |
 | :--- | :--- |
 | `/bc add EventNotice` | 新建名为 `EventNotice` 的广播分组 |
 | `/bc del EventNotice` | 删除指定的广播分组及其所有关联订阅 |
-| `/bc listsub EventNotice` | 审计查看该广播组下包含的所有目标群号与用户名单 |
+
+---
+
+### 查看广播组订阅成员 {#list-subscribers}
+🛠️ `/bc listsub <分组名>`（别名：`/broadcast listsub`）
+
+审计查看指定广播组当前包含的所有目标群号与私聊用户清单。
+
+| 常用操作示例 | 对应说明 |
+| :--- | :--- |
+| `/bc listsub Notice` | 查看 `Notice` 广播组下当前已订阅的全部群聊与用户清单 |
+| `/broadcast listsub EventNotice` | 使用长指令查看指定分组的订阅者列表 |
 
 ---
 
 ### 发送广播消息 {#send-broadcast}
-🛠️ `/bc send <目标分组|all> <消息内容>`
+🛠️ `/bc send <目标分组|all> <消息内容>`（别名：`/broadcast send`）
 
 向指定分组内的全体订阅者分发广播。支持直接附带文本或引用回复已有富媒体消息。
 

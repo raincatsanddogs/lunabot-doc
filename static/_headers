@@ -1,0 +1,11 @@
+# 带 Hash 的 JS/CSS/字体等打包文件，内容变动时文件名 hash 必变，安全开启 1 年强缓存
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 静态图片资源缓存 7 天
+/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# HTML 页面及默认路由使用协商缓存，保证新文档发布时用户第一时间获取最新内容
+/*
+  Cache-Control: public, max-age=0, must-revalidate

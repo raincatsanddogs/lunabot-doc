@@ -27,8 +27,8 @@ import TabItem from '@theme/TabItem';
 | `/help` | 查看当前所有可用服务清单与简介 |
 | `/help sekai` | 查看 `sekai` 服务的指令图文索引 |
 | `/help sekai 2` | 查看 `sekai` 服务第 2 页指令列表 |
-| `/help sekai 查卡` | 查看 `sekai` 服务下 `查卡` 指令的详细参数 |
-| `/查卡 help` | 快捷呼出该指令的对应说明 |
+| `/help sekai 猜曲绘` | 查看 `sekai` 服务下 `猜曲绘` 指令的详细参数 |
+| `/猜曲绘 help` | 快捷呼出该指令的对应说明 |
 
 ---
 
