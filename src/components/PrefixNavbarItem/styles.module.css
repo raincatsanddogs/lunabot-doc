@@ -3,6 +3,21 @@
   display: inline-flex;
   align-items: center;
   margin-right: 0.5rem;
+  padding: 0 !important; /* 抵消 Infima .navbar__item 自带的纵横向 padding，保持按钮居中与紧凑 */
+}
+
+/* 视口 <= 996px 时在顶栏严格隐藏（配合 .navbar__item 双重保险） */
+@media (max-width: 996px) {
+  .wrapper {
+    display: none !important;
+  }
+}
+
+/* 1024px 临界桌面屏优化：在空间受限的桌面视口下隐藏 "前缀:" 纯文本，保留徽章，避免顶栏拥挤推挤 */
+@media (min-width: 997px) and (max-width: 1180px) {
+  .prefixLabel {
+    display: none;
+  }
 }
 
 .triggerBtn {
@@ -143,4 +158,24 @@
   border-top: 1px dashed var(--ifm-color-emphasis-300);
   padding-top: 0.5rem;
   line-height: 1.4;
+}
+
+/* 移动端侧边抽屉专属手风琴样式 */
+.mobileMenuLink {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
+
+.mobileTitle {
+  flex: 1;
+}
+
+.mobilePanel {
+  padding: 0.6rem 0.8rem;
+  background: var(--ifm-menu-color-background-active);
+  border-radius: var(--ifm-global-radius);
+  margin: 0.3rem 0 0.5rem;
 }
